@@ -1,7 +1,10 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        ListNode *first=head, *second=head;
+        if(head == NULL || head->next == NULL)
+            return false;
+        
+          ListNode *first=head, *second=head;
         while(second && second->next){
             first= first->next;
             second= second->next->next;
